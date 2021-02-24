@@ -11,8 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.spring.common.util.CommonUtil;
-
 @Controller
 public class HomeController {
 	
@@ -28,7 +26,6 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		model.addAttribute("combo", CommonUtil.getSelect());
 		
 		return "home";
 	}
