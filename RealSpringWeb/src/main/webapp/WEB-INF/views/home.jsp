@@ -33,6 +33,7 @@ Server정보 : ${ServerInfo}
 	2. Map을   이용한 JSON 반환 <input type="button" value="getMessage2" onclick="getMessage(2)"><br>
 	<select id="type"></select><br>
 	3. <a href="<c:url value="/study/exception404"/>">404 Error</a><br>
-	4. <a href="<c:url value="/study/exceptionByZero"/>">By Zero Error</a>
+	4. <a href="<c:url value="/study/exceptionByZero"/>">By Zero Error</a><br>
+	5. <a href="<c:url value="/study/registForm"/>">회원가입</a>
 </body>
 </html>
