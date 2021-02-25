@@ -23,6 +23,7 @@
 	</script>
 </head>
 <body>
+Server정보 : ${ServerInfo}
 <h1>
 	Hello world!  
 </h1>

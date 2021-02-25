@@ -31,6 +31,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("combo", CommonUtil.getSelect());
+		model.addAttribute("ServerInfo", System.getProperty("spring.profiles.active"));
 		
 		return "home";
 	}
