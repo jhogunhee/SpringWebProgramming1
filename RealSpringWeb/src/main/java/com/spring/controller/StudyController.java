@@ -45,6 +45,13 @@ public class StudyController {
 		
 		return map;
 	}
+	
+	@GetMapping("exceptionByZero")
+	public Map exceptionByZero() {
+		log.info(" :: Study.exceptionByZero :: ");
+		System.out.println(1/0);
+		return new HashMap<>();
+	}
 }
 
 @Data
