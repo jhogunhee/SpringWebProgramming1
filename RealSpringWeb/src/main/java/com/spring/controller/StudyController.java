@@ -19,15 +19,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.common.util.CommonUtil;
+import com.spring.service.StudyService;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Controller
 @RequestMapping("study")
+@RequiredArgsConstructor
 public class StudyController {
+	
+	private final StudyService service;
 	
 	@GetMapping("getMessage1")
 	@ResponseBody
@@ -73,6 +78,12 @@ public class StudyController {
 			HttpServletResponse res) {
 		System.out.println("Parameter :: " + map.toString());
 		return "home/registOk";
+	}
+	
+	@GetMapping("testTransaction")
+	public String testTransaction(Model model, HttpServletRequest req, HttpServletResponse res) {
+		Map map = service.testTransaction(null);
+		return "showMessage";
 	}
 }
 
