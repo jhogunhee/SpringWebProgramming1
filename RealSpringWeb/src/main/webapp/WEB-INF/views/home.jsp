@@ -29,9 +29,6 @@
 			$("#menu5").click(function () {
 				showLoad("/board/writeForm2");
 			});
-			$("#menu6").click(function () {
-				showLoad("/board/writeForm3");
-			});
 		}
 	
 		function getMessage(no) {
@@ -70,9 +67,8 @@
 				1. <span id="menu1" style="cursor:pointer;">404 Error</span><br/>
 				2. <span id="menu2" style="cursor:pointer;">By Zero Error</span><br/>
 				3. <span id="menu3" style="cursor:pointer;">회원가입</span><br/>
-				4. <span id="menu4" style="cursor:pointer;">글쓰기1</span><br/>
-				5. <span id="menu5" style="cursor:pointer;">글쓰기2</span><br/>
-				6. <span id="menu6" style="cursor:pointer;">글쓰기3</span>
+				4. <span id="menu4" style="cursor:pointer;">멀티 파일 업로드 </span><br/>
+				5. <span id="menu5" style="cursor:pointer;">드래그앤 드롭 파일 다운로드</span><br/>
 			</div>
 			<div class="col-md-10">
 				
