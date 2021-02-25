@@ -4,6 +4,9 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -19,11 +22,8 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-//		System.out.println(1/0);
-		
+	public String home(Model model, HttpServletRequest req, HttpServletResponse res) {
+		Locale locale = new Locale("ko", "KR");
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
@@ -31,8 +31,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		model.addAttribute("combo", CommonUtil.getSelect());
-		model.addAttribute("ServerInfo", System.getProperty("spring.profiles.active"));
-		
+//		model.addAttribute("ServerInfo", System.getProperty("spring.profiles.active"));
 		return "home";
 	}
 }
